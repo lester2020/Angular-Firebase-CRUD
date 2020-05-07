@@ -1,0 +1,39 @@
+
+
+<p>
+  <a routerLink="./adduser" class="btn btn-danger">Create New User</a>
+</p>
+<p>
+  <!-- (keyup)="filter(query.value)" -->
+  <input
+  #query
+  type="text" class="form-control" placeholder="Search...">
+</p>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Email</th>
+      <th>Birthday</th>
+      <th>Location</th>
+      <th>Country</th>
+      <th>Zip</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let a of home$ | async">
+      <td>{{ a.firstName }}</td>
+      <td>{{ a.lastName }}</td>
+      <td>{{ a.email }}</td>
+      <td>{{ a.birthday }}</td>
+      <td>{{ a.address }}</td>
+      <td>{{ a.country }}</td>
+      <td>{{ a.zip }}</td>
+      <td>
+        <a [routerLink]="['/adduser', a.$key]">Edit</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

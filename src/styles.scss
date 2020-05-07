@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+body {
+  padding-top: 80px;
+  background-color: #424242;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+// body {
+//   background-color: rgb(229, 188, 188);
+// }
+
+.bg-danger {
+  background-color: #e91e63
+  !important;
+}
+
+
+.btn-danger {
+  color: #fff;
+  background-color: #e91e63;
+  border-color: #e91e63;
+}
+
+.table {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+h4 {
+  color: rgba(255, 255, 255, 0.7)
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 0px;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
